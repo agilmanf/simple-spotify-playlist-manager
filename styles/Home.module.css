@@ -1,0 +1,24 @@
+.container {
+  width: 1080px;
+  height: 85vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-login {
+  background-color: #0bd557;
+  border: none;
+  font-size: 20px;
+  padding: 14px 18px;
+  border-radius: 6px;
+  color: rgb(243, 242, 242);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  transform: scale(1.03);
+}
