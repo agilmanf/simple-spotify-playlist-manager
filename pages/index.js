@@ -6,7 +6,7 @@ export default function Home() {
     const redirectUri =
       window.location.hostname === "localhost"
         ? "http://localhost:3000/login"
-        : "";
+        : "https://simple-spotify-playlist-manager.vercel.app/login";
 
     const clientId = "db5f0d7750c44115acd3cd74d791da23";
     const scope =

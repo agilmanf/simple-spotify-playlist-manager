@@ -15,7 +15,7 @@ const Login = () => {
     const redirectUri =
       window.location.hostname === "localhost"
         ? "http://localhost:3000/login"
-        : "";
+        : "https://simple-spotify-playlist-manager.vercel.app/login";
 
     const clientId = "db5f0d7750c44115acd3cd74d791da23";
     const clientSecret = "19dfe90ce1a244ffa2d6b726f8dc1a66";

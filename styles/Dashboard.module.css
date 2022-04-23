@@ -50,7 +50,11 @@
 
 .playlist-container div h5 {
   margin: 0;
+  white-space: nowrap;
   font-size: 18px;
+  padding: 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .playlist-container div span {
