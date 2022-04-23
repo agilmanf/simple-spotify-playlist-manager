@@ -8,7 +8,7 @@
 }
 
 .user-profile h1 {
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 .user-profile img {
@@ -22,10 +22,39 @@
 .user-info {
   color: rgb(117, 117, 117);
   font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user-info div {
+  min-width: fit-content;
+  width: 45%;
+}
+
+.user-info span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.btn {
+  color: white;
+  background-color: #50b942;
+  padding: 10px;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.title {
+  margin: 20px 0;
 }
 
 .playlist-container {
-  margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import styles from "../../styles/Dashboard.module.css";
 import axios from "axios";
+import Link from "next/link";
 
 const Dashboard = () => {
   const router = useRouter();
@@ -42,19 +43,14 @@ const Dashboard = () => {
     );
 
     console.log(user.data);
-    console.log(playlist.data.items);
+
     setUser(user.data);
     setPlaylist(playlist.data.items);
     setLoading(false);
   }
 
-  function playlistClick(id) {
-    alert(id);
-  }
-
   return (
     <Layout>
-      <hr />
       {loading ? (
         <h3>Loading...</h3>
       ) : (
@@ -69,28 +65,48 @@ const Dashboard = () => {
             <div>
               <h1>{user.display_name}</h1>
               <div className={styles["user-info"]}>
-                <h4>Username : {user.display_name}</h4>
-                <h4>Email : {user.email}</h4>
-                <h4>Member : {user.product}</h4>
-                <h4>Country : {user.country}</h4>
-                <a href={user.uri}>See Profile on Spotify</a>
+                <div>
+                  <h4>Spotify ID</h4>
+                  <span>{user.id}</span>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <span>{user.email}</span>
+                </div>
+                <div>
+                  <h4>Product Type</h4>
+                  <span>{user.product}</span>
+                </div>
+                <div>
+                  <h4>Country</h4>
+                  <span>{user.country}</span>
+                </div>
+                <div>
+                  <h4>Followers</h4>
+                  <span>{user.followers.total}</span>
+                </div>
               </div>
+              <a className={styles.btn} href={user.uri}>
+                See Profile on Spotify
+              </a>
             </div>
           </section>
           <hr />
-          <h2>My Playlists</h2>
+          <h2 className={styles.title}>My Playlists</h2>
           <section className={styles["playlist-container"]}>
             {playlist.map((p, index) => (
-              <div key={index} onClick={() => playlistClick(p.id)}>
-                <img
-                  src={
-                    p.images.length !== 0 ? p.images[0].url : "/playlist.jpg"
-                  }
-                  alt={p.name}
-                />
-                <h5>{p.name}</h5>
-                <span>({p.tracks.total} Songs)</span>
-              </div>
+              <Link href={`/playlist/${p.id}`} key={index}>
+                <div>
+                  <img
+                    src={
+                      p.images.length !== 0 ? p.images[0].url : "/playlist.jpg"
+                    }
+                    alt={p.name}
+                  />
+                  <h5>{p.name}</h5>
+                  <span>({p.tracks.total} Songs)</span>
+                </div>
+              </Link>
             ))}
           </section>
         </>

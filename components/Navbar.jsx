@@ -9,15 +9,18 @@ const Navbar = () => {
     router.push("/");
   }
   return (
-    <nav>
-      <h3 className="title">Simple Spotify Playlist Manager</h3>
-      <ul className="menu">
-        <Link href="/dashboard">
-          <li>Home</li>
-        </Link>
-        <li onClick={logout}>Logout</li>
-      </ul>
-    </nav>
+    <>
+      <nav>
+        <h3 className="title">Simple Spotify Playlist Manager</h3>
+        <ul className="menu">
+          <Link href="/dashboard">
+            <li>Home</li>
+          </Link>
+          <li onClick={logout}>Logout</li>
+        </ul>
+      </nav>
+      <hr />
+    </>
   );
 };
 
