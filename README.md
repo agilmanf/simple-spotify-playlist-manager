@@ -8,4 +8,3 @@ Beberapa langkah untuk menjalankan secara local:
 - dan terakhir untuk menjalankan aplikasi ketikan perintah "npm run dev"
 
 https://simple-spotify-playlist-manager.vercel.app/
-Powered by Next.js
