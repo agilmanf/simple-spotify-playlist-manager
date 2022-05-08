@@ -1,4 +1,4 @@
-Simple Spotify Playlist Manager
+# Simple Spotify Playlist Manager
 
 Beberapa langkah untuk menjalankan secara local:
 
@@ -6,3 +6,6 @@ Beberapa langkah untuk menjalankan secara local:
 - jika sudah di clone masuk ke dalam folder dan buka terminal
 - sebelum di run, install beberapa dependencies yang diperlukan dengan perintah "npm i"
 - dan terakhir untuk menjalankan aplikasi ketikan perintah "npm run dev"
+
+https://simple-spotify-playlist-manager.vercel.app/
+Powered by Next.js
